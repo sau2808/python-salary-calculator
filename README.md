@@ -9,6 +9,16 @@ A simple Python project for freshers to practise:
 - Exception handling
 - Virtual environments
 - Git and GitHub
+- Accepts employee name and basic salary
+- Accepts a bonus percentage
+- Calculates HRA at 20%
+- Calculates DA at 10%
+- Calculates PF at 12%
+- Calculates employee bonus
+- Calculates gross salary
+- Calculates net salary
+- Displays a formatted salary table
+- Handles invalid input
 
 ## Salary Rules
 
