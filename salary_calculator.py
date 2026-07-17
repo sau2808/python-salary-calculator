@@ -1,3 +1,28 @@
+# def calculate_salary(basic_salary: float) -> dict:
+#     """
+#     Calculate employee salary components.
+
+#     HRA = 20% of basic salary
+#     DA = 10% of basic salary
+#     PF = 12% of basic salary
+#     """
+
+#     hra = basic_salary * 0.20
+#     da = basic_salary * 0.10
+#     pf = basic_salary * 0.12
+
+#     gross_salary = basic_salary + hra + da
+#     net_salary = gross_salary - pf
+
+#     return {
+#         "basic_salary": basic_salary,
+#         "hra": hra,
+#         "da": da,
+#         "pf": pf,
+#         "gross_salary": gross_salary,
+#         "net_salary": net_salary
+#     }
+
 def calculate_salary(basic_salary: float) -> dict:
     """
     Calculate employee salary components.
@@ -5,13 +30,15 @@ def calculate_salary(basic_salary: float) -> dict:
     HRA = 20% of basic salary
     DA = 10% of basic salary
     PF = 12% of basic salary
+    Bonus = 5% of basic salary
     """
 
     hra = basic_salary * 0.20
     da = basic_salary * 0.10
     pf = basic_salary * 0.12
+    bonus = basic_salary * 0.05
 
-    gross_salary = basic_salary + hra + da
+    gross_salary = basic_salary + hra + da + bonus
     net_salary = gross_salary - pf
 
     return {
@@ -19,6 +46,7 @@ def calculate_salary(basic_salary: float) -> dict:
         "hra": hra,
         "da": da,
         "pf": pf,
+        "bonus": bonus,
         "gross_salary": gross_salary,
         "net_salary": net_salary
     }
@@ -47,6 +75,7 @@ def main() -> None:
         print("-" * 40)
         print(f"Gross Salary : ₹{salary['gross_salary']:.2f}")
         print(f"Net Salary   : ₹{salary['net_salary']:.2f}")
+        print(f"Bonus (5%)   : ₹{salary['bonus']:.2f}") #Add this line
 
     except ValueError:
         print("Invalid input. Please enter a numeric salary.")
